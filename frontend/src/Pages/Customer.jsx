@@ -2,8 +2,11 @@ import React from 'react'
 
 function Customer() {
   return (
-    <div>
-      
+     <div className="admin-container">
+      <AdminSideBar/>
+      <main>
+
+      </main>
     </div>
   )
 }

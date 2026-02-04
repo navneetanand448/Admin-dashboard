@@ -2,8 +2,11 @@ import React from 'react'
 
 function Products() {
   return (
-    <div>
-      
+     <div className="admin-container">
+      <AdminSideBar/>
+      <main>
+
+      </main>
     </div>
   )
 }
