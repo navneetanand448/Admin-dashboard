@@ -18,7 +18,7 @@ ChartJS.register(
   Legend
 );
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-export function Barchart({
+export function BarChart({
   horizontal=false,
   data_1=[],
   data_2=[],
@@ -26,33 +26,48 @@ export function Barchart({
   title_2,
   bgColor_1,
   bgColor_2,
-  label=months,
+  labels=months,
 }) {
  const options = {
   responsive: true,
   indexAxis:horizontal?"y":"x",
   plugins: {
     legend: {
-      display:false,
+      display:true,
     },
     title: {
-      display: true,
-      text: 'Chart.js Bar Chart',
+      display: false,
     },
   },
+    scales:{
+      y:{
+        beginAtZero:true,
+        grid:{
+          display:false,
+        }
+      },
+        x:{
+        beginAtZero:false,
+        grid:{
+          display:false,
+        }
+      }
+    }
 };
  const data = {
-  label,
+  labels,
   datasets: [
     {
       label: title_1,
       data: data_1,
       backgroundColor: bgColor_1,
+      barThickness:"flex",
     },
     {
       label: title_2,
       data: data_2,
       backgroundColor:bgColor_2,
+      barThickness:"flex",
     },
   ],
 };

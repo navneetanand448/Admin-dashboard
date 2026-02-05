@@ -4,10 +4,11 @@ import AdminSideBar from "../Components/Adminsidebar";
 import userImg from "../assets/userpic.png";
 import { HiTrendingUp, HiTrendingDown } from "react-icons/hi";
 import data from '../assets/data.json'
-import { Barchart } from "../Components/Charts";
+import { BarChart } from "../Components/Charts";
+import {BiMaleFemale} from 'react-icons/bi'
 function Dashboard() {
   return (
-    <div className="admin-Container">
+    <div className="admin-container">
       <AdminSideBar />
       <main className="dashboard">
         <div className="bar">
@@ -47,14 +48,14 @@ function Dashboard() {
   <div className="revenue-chart">
     <h2>Revenue & Transactions</h2>
 
-    <Barchart
+    <BarChart
       labels={["Jan", "Feb", "Mar", "Apr", "May", "Jun"]}
       data_1={[300, 144, 433, 655, 237, 755]}
       data_2={[200, 244, 833, 855, 437, 655]}
       title_1="Revenue"
       title_2="Transaction"
       bgColor_1="rgb(0,115,255)"
-      bgColor_2="rgb(53,162,235)"
+      bgColor_2="rgb(53,162,235,0.8)"
     />
   </div>
 
@@ -71,6 +72,16 @@ function Dashboard() {
       ))}
     </div>
   </div>
+</section>
+<section className='transaction-container'>
+  <div className="gender-chart">
+    <h2>Gender Ratio</h2>
+    <p>
+      <BiMaleFemale/>
+    
+    </p>
+  </div>
+
 </section>
 
       </main>
