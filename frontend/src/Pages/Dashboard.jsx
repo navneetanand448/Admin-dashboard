@@ -4,7 +4,7 @@ import AdminSideBar from "../Components/Adminsidebar";
 import userImg from "../assets/userpic.png";
 import { HiTrendingUp, HiTrendingDown } from "react-icons/hi";
 import data from '../assets/data.json'
-import { BarChart } from "../Components/Charts";
+import { BarChart, DoughnutChart } from "../Components/Charts";
 import {BiMaleFemale} from 'react-icons/bi'
 function Dashboard() {
   return (
@@ -77,8 +77,12 @@ function Dashboard() {
   <div className="gender-chart">
     <h2>Gender Ratio</h2>
     <p>
+      <DoughnutChart labels={["Female","Male"]}
+      data={[12,22]}
+      backgroundColor={["hsl(340,82%,56%)","rgba(53,162,235,0.8"]}
+      />
       <BiMaleFemale/>
-    
+
     </p>
   </div>
 
