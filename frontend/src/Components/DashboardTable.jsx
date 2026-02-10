@@ -22,7 +22,7 @@ const columns=[
 }
 ]
 const TransactionTable = TableHOC("Top Transaction");
-function Table({data=[]}){
+function Table({ data=[] }){
   return (
    <TransactionTable
       columns={columns}

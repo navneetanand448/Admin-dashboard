@@ -1,5 +1,6 @@
-@use "./mixin";
-@use "./dashboard";
+@import "mixin";
+@import "dashboard";
+@import "products";
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -28,59 +29,36 @@ a {
   color: rgb(0, 195, 0);
 }
 
-/* =========================
-   ADMIN CONTAINER
-========================= */
-
 .admin-container {
+  @include grid(1fr 4fr, 2rem);
   height: 100vh;
   background-color: rgb(247, 247, 247);
-
-  @include mixin.grid(1fr 4fr, 2rem);
-
   > aside {
     width: 100%;
     background-color: white;
     padding: 1rem;
     z-index: 10;
     overflow-y: auto;
-
     &::-webkit-scrollbar {
       display: none;
     }
 
     > div {
       margin: 2rem 1rem;
-
       > h5 {
+        @include heading(2px);
         opacity: 0.8;
         margin: 1rem 0;
-
-        @include mixin.heading(2px);
       }
-
       > ul {
+        @include flex(column, unset, unset, 0.5rem);
         list-style: none;
-
-        @include mixin.flex(
-          $dir: column,
-          $justifyContent: unset,
-          $alignItems: unset,
-          $gap: 0.5rem
-        );
-
         > li {
           padding: 0.5rem 1rem;
           border-radius: 10px;
-
           a {
             color: rgba(0, 0, 0, 0.825);
-
-            @include mixin.flex(
-              $dir: row,
-              $justifyContent: unset,
-              $alignItems: center
-            );
+            @include flex(row, unset);
           }
         }
       }
@@ -88,14 +66,9 @@ a {
   }
 }
 
-/* =========================
-   TABLE
-========================= */
-
 .table {
   border-collapse: collapse;
   width: 100%;
-
   th,
   td {
     padding: 8px;
@@ -104,6 +77,7 @@ a {
   }
 
   th {
+    font-weight: bold;
     color: #0000009e;
     font-size: 1.1rem;
     font-weight: 400;
@@ -124,14 +98,13 @@ a {
         object-fit: contain;
         border-radius: 10px;
       }
-
       a {
+        text-decoration: none;
         background-color: rgba(44, 104, 255, 0.455);
         color: rgba(44, 104, 255);
         padding: 0.25rem 0.5rem;
         border-radius: 10px;
       }
-
       button {
         width: 2rem;
         height: 2rem;
@@ -141,33 +114,33 @@ a {
         background-color: transparent;
         cursor: pointer;
         color: rgb(255, 44, 44);
-
         &:hover {
           opacity: 0.6;
         }
+      }
+
+      &:first-child {
+        border-left: none;
+      }
+
+      &:last-child {
+        border-right: none;
       }
     }
   }
 }
 
-/* =========================
-   TABLE PAGINATION
-========================= */
-
 .table-pagination {
+  @include flex;
   padding: 2rem;
-
-  @include mixin.flex;
-
   > button {
     padding: 0.5rem 1rem;
     border: none;
     outline: none;
     border-radius: 10px;
     cursor: pointer;
-    background-color: rgb(0, 115, 255);
+    background-color: rgba(0, 115, 255);
     color: white;
-
     &:disabled {
       background-color: rgba(0, 115, 255, 0.1);
       cursor: not-allowed;
@@ -175,32 +148,22 @@ a {
   }
 }
 
-/* =========================
-   HAMBURGER
-========================= */
-
 #hamburger {
   display: grid;
   place-items: center;
+  @include square(3rem);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: rgba(44, 104, 255);
   position: fixed;
   top: 1rem;
   left: 1rem;
-  z-index: 9;
-
   font-size: 2rem;
-  color: rgba(44, 104, 255);
   background-color: white;
   border-radius: 50%;
-  cursor: pointer;
-  border: none;
-  outline: none;
-
-  @include mixin.square(3rem);
+  z-index: 9;
 }
-
-/* =========================
-   CLOSE SIDEBAR
-========================= */
 
 #close-sidebar {
   width: 80%;
@@ -215,31 +178,20 @@ a {
   border-radius: 10px;
 }
 
-/* =========================
-   LOADER
-========================= */
-
 .loader {
   width: 100%;
   height: 100vh;
-
-  @include mixin.flex;
-
+  @include flex;
   > div {
+    @include square(10rem);
     border-radius: 50%;
     border-top: 1rem solid rgb(43, 43, 43);
     border-left: 1rem solid rgb(43, 43, 43);
     border-right: 1rem solid #fff;
     border-bottom: 1rem solid #fff;
     animation: loading-animation 0.5s linear infinite;
-
-    @include mixin.square(10rem);
   }
 }
-
-/* =========================
-   KEYFRAMES
-========================= */
 
 @keyframes loading-animation {
   to {
