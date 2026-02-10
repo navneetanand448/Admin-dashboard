@@ -1,7 +1,6 @@
 import TableHOC from "./TableHOC"
 
-function
-() {
+function DashboardTable() {
   return (
     <div>
 
@@ -9,4 +8,4 @@ function
   )
 }
 
-export default
+export default DashboardTable
