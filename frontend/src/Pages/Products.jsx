@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import AdminSidebar from "../components/AdminSidebar";
+import AdminSideBar from "../Components/Adminsidebar";
 import TableHOC from "../components/TableHOC";
 import { FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -11,7 +11,6 @@ const columns = [
   {
     header: "Photo",
     accessorKey: "photo",
-    // ✅ FIX 1: Render Image Component Here
     cell: ({ getValue }) => <img src={getValue()} alt="Product" />,
   },
   {
@@ -29,18 +28,17 @@ const columns = [
   {
     header: "Action",
     accessorKey: "action",
-    // ✅ FIX 2: Render Link Component Here
     cell: ({ getValue }) => <Link to={getValue()}>Manage</Link>,
   },
 ];
 
 const arr = [
   {
-    photo: img, // Raw String URL
+    photo: img,
     name: "Puma Shoes Air Jordan 2023",
     price: 690,
     stock: 3,
-    action: "/admin/product/sajknaskd", // Raw String URL
+    action: "/admin/product/sajknaskd",
   },
   {
     photo: img2,
