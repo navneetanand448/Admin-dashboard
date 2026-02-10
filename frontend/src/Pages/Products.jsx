@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import AdminSideBar from "../Components/Adminsidebar";
+import AdminSidebar from "../Components/Adminsidebar";
 import TableHOC from "../Components/TableHOC";
 import { FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
