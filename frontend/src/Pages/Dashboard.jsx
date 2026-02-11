@@ -1,6 +1,6 @@
 import { BsSearch } from "react-icons/bs";
 import { FaRegBell } from "react-icons/fa";
-import AdminSidebar from "../Components/Adminsidebar"
+import AdminSidebar from "../Components/Adminsidebar";
 import userImg from "../assets/userpic.png";
 import { HiTrendingUp, HiTrendingDown } from "react-icons/hi";
 import data from '../assets/data.json'
@@ -10,7 +10,7 @@ import Table from '../Components/DashboardTable'
 function Dashboard() {
   return (
     <div className="admin-container">
-      <AdminSideBar />
+      <AdminSidebar />
       <main className="dashboard">
         <div className="bar">
           <BsSearch />

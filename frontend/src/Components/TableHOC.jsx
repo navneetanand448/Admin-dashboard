@@ -14,6 +14,11 @@ function TableHOC(heading) {
     const table = useReactTable({
       data,
       columns,
+      initialState: {
+        pagination: {
+          pageSize: 6,
+        },
+      },
       state: {
         sorting,
       },
