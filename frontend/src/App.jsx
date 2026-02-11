@@ -1,13 +1,24 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
-import Loader from './Components/Loader.jsx';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import { lazy, Suspense } from "react";
+import Loader from "./Components/Loader.jsx";
 
 // Lazy imports
 const Dashboard = lazy(() => import("./Pages/Dashboard.jsx"));
 const Transaction = lazy(() => import("./Pages/Transaction.jsx"));
 const Products = lazy(() => import("./Pages/Products.jsx"));
 const Customer = lazy(() => import("./Pages/Customer.jsx"));
-
+const NewProduct = lazy(() => import("./Pages/management/NewProduct.jsx"));
+const ProductManagement = lazy(
+  () => import("./Pages/management/ProductManagement.jsx"),
+);
+const TransactionManagement = lazy(
+  () => import("./Pages/management/TransactionManagement.jsx"),
+);
 function App() {
   return (
     <Router>
@@ -22,6 +33,12 @@ function App() {
           <Route path="/admin/transaction" element={<Transaction />} />
           <Route path="/admin/product" element={<Products />} />
           <Route path="/admin/customer" element={<Customer />} />
+          <Route path="/admin/product/new" element={<NewProduct />} />
+          <Route path="/admin/product/:id" element={<ProductManagement />} />
+          <Route
+            path="/admin/transaction/:id"
+            element={<TransactionManagement />}
+          />
         </Routes>
       </Suspense>
     </Router>

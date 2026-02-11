@@ -9,11 +9,7 @@ const columns = [
     header: "Avatar",
     accessorKey: "avatar",
     cell: ({ getValue }) => (
-      <img
-        style={{ borderRadius: "50%" }}
-        src={getValue()}
-        alt="User"
-      />
+      <img style={{ borderRadius: "50%" }} src={getValue()} alt="User" />
     ),
   },
   {
@@ -28,7 +24,7 @@ const columns = [
     header: "Gender",
     accessorKey: "gender",
   },
-    {
+  {
     header: "Role",
     accessorKey: "role",
   },
@@ -42,8 +38,8 @@ const columns = [
     ),
   },
 ];
-const arr=[
- {
+const arr = [
+  {
     avatar: (
       <img
         style={{
@@ -57,7 +53,7 @@ const arr=[
     email: "emily.palmer@example.com",
     gender: "female",
     role: "user",
-    action: "delete"
+    action: "delete",
   },
 
   {
@@ -80,22 +76,23 @@ const arr=[
       </button>
     ),
   },
-]
+];
 function Customer() {
-  const [data]=useState(arr);
-    const CustomerTable = useCallback(TableHOC("Customers"), []);
+  const [data] = useState(arr);
+  const CustomerTable = useCallback(TableHOC("Customers"), []);
+
   return (
-     <div className="admin-container">
-      <AdminSidebar/>
+    <div className="admin-container">
+      <AdminSidebar />
       <main>
-      <CustomerTable
-        data={data}
+        <CustomerTable
+          data={data}
           columns={columns}
           containerClassName="dashboard-product-box"
-      />
+        />
       </main>
     </div>
-  )
+  );
 }
 
-export default Customer
+export default Customer;
