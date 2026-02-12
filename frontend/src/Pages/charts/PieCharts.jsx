@@ -1,4 +1,4 @@
-import AdminSidebar from "../../Components/AdminSidebar";
+import AdminSidebar from "../../Components/Adminsidebar";
 import { DoughnutChart, PieChart } from "../../Components/Charts";
 import { categories } from "../../assets/data.json";
 
