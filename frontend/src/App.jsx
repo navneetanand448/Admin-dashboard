@@ -16,12 +16,15 @@ const NewProduct = lazy(() => import("./Pages/management/NewProduct.jsx"));
 const ProductManagement = lazy(
   () => import("./Pages/management/ProductManagement.jsx"),
 );
-const BarCharts=lazy(()=>import("./Pages/charts/BarCharts.jsx"))
-const PieCharts=lazy(()=>import("./Pages/charts/PieCharts.jsx"))
-const LineCharts=lazy(()=>import("./Pages/charts/LineCharts.jsx"))
+const BarCharts = lazy(() => import("./Pages/charts/BarCharts.jsx"));
+const PieCharts = lazy(() => import("./Pages/charts/PieCharts.jsx"));
+const LineCharts = lazy(() => import("./Pages/charts/LineCharts.jsx"));
 const TransactionManagement = lazy(
   () => import("./Pages/management/TransactionManagement.jsx"),
 );
+const Toss = lazy(() => import("./Pages/apps/Toss.jsx"));
+const Coupons = lazy(() => import("./Pages/apps/Coupons.jsx"));
+const StopWatch = lazy(() => import("./Pages/apps/StopWatch.jsx"));
 function App() {
   return (
     <Router>
@@ -36,10 +39,10 @@ function App() {
           <Route path="/admin/transaction" element={<Transaction />} />
           <Route path="/admin/product" element={<Products />} />
           <Route path="/admin/customer" element={<Customer />} />
-          
-          <Route path="/admin/chart/bar" element={<BarCharts/>}/>
-           <Route path="/admin/chart/pie" element={<PieCharts/>}/>
-            <Route path="/admin/chart/line" element={<LineCharts/>}/>
+
+          <Route path="/admin/chart/bar" element={<BarCharts />} />
+          <Route path="/admin/chart/pie" element={<PieCharts />} />
+          <Route path="/admin/chart/line" element={<LineCharts />} />
 
           <Route path="/admin/product/new" element={<NewProduct />} />
           <Route path="/admin/product/:id" element={<ProductManagement />} />
@@ -47,6 +50,9 @@ function App() {
             path="/admin/transaction/:id"
             element={<TransactionManagement />}
           />
+          <Route path="/admin/app/stopwatch" element={<StopWatch />} />
+          <Route path="/admin/app/coupon" element={<Coupons />} />
+          <Route path="/admin/app/toss" element={<Toss />} />
         </Routes>
       </Suspense>
     </Router>
