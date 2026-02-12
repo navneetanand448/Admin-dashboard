@@ -15,7 +15,7 @@ import {
 import { Link, useLocation } from "react-router-dom";
 
 const Li = ({ url, text, location, Icon }) => {
-  const isActive = location.pathname.includes(url);
+  const isActive = location.pathname === url;
 
   return (
     <li
