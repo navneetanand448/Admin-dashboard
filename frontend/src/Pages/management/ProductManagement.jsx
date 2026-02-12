@@ -21,13 +21,13 @@ function ProductManagement() {
         }
     }
   }
-  const submitHandler=(e)=>{
+  }
+    const submitHandler=(e)=>{
     e.preventDefault();
     setName(nameUpdate);
     setPrice(priceUpdate);
     setStock(stockUpdate);
     setPhoto(photoUpdate);
-  }
   }
   return (
     <div className="admin-container">
