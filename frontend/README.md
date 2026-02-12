@@ -1,16 +1,32 @@
-# React + Vite
+# 📊 Admin Dashboard - React & Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance Admin Dashboard built with **React**, **Vite**, and **SCSS**. This project features advanced data tables, management systems, and utility applications.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dashboard:** Real-time visualization of key business metrics.
+- **Management System:** Full CRUD functionality for:
+  - **Products:** Manage inventory and product details.
+  - **Customers:** Detailed user management and tracking.
+  - **Transactions:** Monitor and manage sales history.
+- **Utility Apps:**
+  - **Stopwatch:** Performance tracking tool.
+  - **Toss:** A custom coin-flip utility with visual assets.
+  - **Coupons:** Discount and promotion generator.
+- **Advanced Charts:** Interactive data visualization (Line, Bar, and Pie charts).
+- **TableHOC:** A reusable Higher-Order Component for standardized, searchable, and paginated tables.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React.js (JavaScript)
+- **Build Tool:** Vite
+- **Styling:** SCSS / Tailwind CSS
+- **Icons:** React Icons
+- **Deployment:** Vercel
 
-## Expanding the ESLint configuration
+## 📦 Installation & Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/navneetanand448/Admin-dashboard.git](https://github.com/navneetanand448/Admin-dashboard.git)
+   cd Admin-dashboard/frontend
