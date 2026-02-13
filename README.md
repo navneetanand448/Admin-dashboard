@@ -5,7 +5,7 @@ A high-performance, responsive admin dashboard built with **React**, **Vite**, a
 
 
 ## 🚀 Live Demo
-**Vercel URL:** [Paste your Vercel link here]
+**Vercel URL:** [admin-dashboard-nine-phi-18.vercel.app]
 
 ## ✨ Features
 
